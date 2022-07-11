@@ -42,6 +42,11 @@ public class LinkController {
         return ResponseEntity.created(null).build();
     }
 
+    // get list of links by website name
+    @GetMapping("/links/website/{websiteName}")
+    public List<Link> getWebsite(@PathVariable String websiteName) {
+        return linkService.getWebsite(websiteName);
+    }
 
 
 }
