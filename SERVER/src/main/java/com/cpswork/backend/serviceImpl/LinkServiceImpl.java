@@ -31,8 +31,10 @@ public class LinkServiceImpl {
 
     //get link by website
     public List<Link> getWebsite(String websiteName) {
+        System.out.println("reached here ...................");
 
         Website website = websiteService.findByWebsiteName(websiteName);
+
 
         return linkRepository.findByWebsite(website);
     }
